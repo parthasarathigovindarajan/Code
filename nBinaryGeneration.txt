@@ -1,52 +1,30 @@
-class Codechef
+class Nbinary
 {
-	
-	public static void main (String[] args) throws java.lang.Exception
-	
+	public static void main (String[] args)
 	{
-		
 		Scanner sc=new Scanner(System.in);
-		
 		int val=sc.nextInt();
-        
-		Codechef obj=new Codechef();
-        
+		Nbinary obj=new Nbinary();
 		for(int i=1; i<=val; i++){
-        
 			String result=obj.binaryReturn(i);
-		
 			System.out.println(result);
-        
 		}
-	
 	}
-	
-		String binaryReturn(int val){
-	     
-		String preBinary="";
-	     
-			while(val!=0){
-	     
+		String binaryReturn(int val)
+		{
+		  String preBinary="";
+			while(val!=0)
+			{
 				int res=val/2;
-	     
 				int res1=val%2;
-	     
 				val=res;
-	     
 				String binary=new String();
-	        
-				if(res1==1 || res1==0){
-	         
+				if(res1==1 || res1==0)
+				{
 					binary=String.valueOf(res1);
-	         
 					preBinary=binary+preBinary;
-	        
 				}
-	     
-			}
-	     	
-		return preBinary;
-	 
-	}
-
+		  }
+		  return preBinary;
+		}
 }
