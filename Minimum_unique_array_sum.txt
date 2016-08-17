@@ -1,0 +1,68 @@
+class MinimumUniqueArraySum
+{
+	
+public static void main (String[] args)
+    {
+		
+	Scanner sc=new Scanner(System.in);
+
+	int arrSize=sc.nextInt();
+
+	int arr[]=new int[arrSize];
+
+	int sum=0;
+	
+	for(int i=0; i<arrSize; i++)
+	
+	{
+	
+	    arr[i]=sc.nextInt();
+	
+	}
+	
+	Arrays.sort(arr);
+		
+	for(int l=0; l<arrSize; l++)
+
+	{
+	
+		System.out.println(arr[l]);
+
+	}
+	
+	for(int j=0; j<arrSize; j++)
+	
+	{
+		  
+		 for(int k=j+1; k<arrSize; k++)
+	
+		{	
+		
+        			if(arr[j]==arr[k])
+	
+	        		{
+	
+	            			arr[k]++;
+	
+	           
+		 }
+		
+   		 }
+		    
+		
+	}
+		
+	for(int z=0; z<arrSize; z++)
+
+	{
+	
+	        sum=sum+arr[z];
+		        	
+
+	}
+	
+	System.out.println(sum);
+
+    }
+
+}
