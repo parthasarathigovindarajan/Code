@@ -1,0 +1,21 @@
+class EmbeddedString
+{
+	public static void main (String[] args)
+	{
+		int sum=0;
+		List<Integer> numbers = new LinkedList<Integer>();
+		Scanner sc-new Scanner(System.in);
+		String str=sc.nextLine();
+		Pattern p = Pattern.compile("\\d+");
+		Matcher m = p.matcher(str); 
+		while (m.find()) 
+		{
+			numbers.add(Integer.parseInt(m.group()));
+		}
+		for (int i: numbers)
+		{
+			sum += i;
+		}
+		System.out.println(sum);
+	}
+}
